@@ -70,6 +70,14 @@ describe('TodoMVC', function () {
     cy.get('.todo-list li').should('have.length', 2)
   })
 
+  it('adds 2 todos sample sample', function () {
+    cy.get('.new-todo')
+    .type('learn testing{enter}')
+    .type('be cool{enter}')
+
+    cy.get('.todo-list li').should('have.length', 2)
+  })
+
   context('No Todos', function () {
     it('should hide #main and #footer', function () {
       // Unlike the TodoMVC tests, we don't need to create
